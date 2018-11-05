@@ -18,7 +18,7 @@ ul.fileList li {
     width:400px;
 }
 
-.fileInputDemo.nfdDragging,
+.fileInputDemo.nfd-dragging,
 .fileInputDemo:hover
  {
     background-color:lightblue;

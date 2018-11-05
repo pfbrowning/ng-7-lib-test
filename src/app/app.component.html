@@ -8,7 +8,7 @@
 
 <input type="button" (click)="fileDropModal.show()" value="Show File Drop Modal" />
 <input type="button" (click)="showLoadingIndicator()" value="Show Loading Indicator" />
-<nm-modal-window #fileDropModal>
+<nm-modal-window [showCloseButton]="true" #fileDropModal>
   <div body>
     <p>Test</p>
     <nfd-file-input #fileInput containerDivClass="fileInputDemo" (filesRejected)="onFilesRejected($event)" allowedExtensions="pdf,doc,docx,xls,xlsx,json" [maxFileSize]="4194304">
