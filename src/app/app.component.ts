@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { LoadingIndicatorService } from '@browninglogic/ng-loading-indicator';
+import { timer } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ng-seven-lib-test';
+
+  constructor(private loadingIndicatorService: LoadingIndicatorService) {}
+
+  public showLoadingIndicator() {
+    this.loadingIndicatorService.showLoadingIndicator();
+    timer(2500).subscribe(() => this.loadingIndicatorService.hideLoadingIndicator());
+  }
 }
