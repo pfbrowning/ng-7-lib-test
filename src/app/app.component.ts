@@ -16,4 +16,8 @@ export class AppComponent {
     this.loadingIndicatorService.showLoadingIndicator();
     timer(2500).subscribe(() => this.loadingIndicatorService.hideLoadingIndicator());
   }
+
+  public onFilesRejected(event) {
+    console.log('files rejected', event);
+  }
 }
